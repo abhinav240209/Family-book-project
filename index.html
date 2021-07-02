@@ -1,0 +1,41 @@
+<html >
+<head>
+    <title>
+        Family Chart
+    </title>
+    <link rel="stylesheet" gref="style.css">
+</head>
+<body>
+
+    <h2>My Family BOOK</h2>
+
+    <br><br>
+    <img src="https://image.shutterstock.com/image-vector/family-together-group-people-standing-260nw-590327120.jpg" id="family_member_image">
+     <br><br>
+
+     <h4 id="family_member_name"></h4>
+    <button onclick="update();">Next</button>
+
+   <script>
+    var images=["https://image.shutterstock.com/image-vector/family-together-group-people-standing-260nw-590327120.jpg","https://abhinav240209.github.io/family-photos/Father.jpeg","https://abhinav240209.github.io/family-photos/Mother.jpeg","https://abhinav240209.github.io/family-photos/Me.jpeg"];
+    var names=["","Abhinav Arun","Rekha Kuttppan","Arun Sukumaran"];
+
+    var i=0;
+    function update()
+    {
+
+        i++;
+        var number_offamilymembersinarray=5;
+        if(i>number_offamilymembersinarray)
+        {
+            i=0;
+        }
+        var updatedimage= images[i];
+        var updatedname= names[i];
+        document.getElementById("family_member_image").src=updatedimage;
+        document.getElementById("family_member_name").innerHTML=updatedname;
+    }
+   </script>
+     
+</body>
+</html>
